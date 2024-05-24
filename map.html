@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Monitoring</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="map" style="width: 100%; height: 100vh;"></div>
+    <!-- <script src="utils/map.js"></script> -->
+</body>
+</html>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+<script>
+    const asal = localStorage.getItem('nilai-asal');
+    const tujuan = localStorage.getItem('nilai-tujuan');
+
+    if (asal === 'Halte SMP 6') {
+        var koordinatAsallat = -6.858894307253639;
+        var koordinatAsallng = 109.12600904703892;
+    } else if (asal === 'Halte Yos Sudarso') {
+        var koordinatAsallat = -6.85462980066191;
+        var koordinatAsallng = 109.13632385767966;
+    } else if (asal === 'Halte UPTD SPF SMPN 7 Kota Tegal') {
+        var koordinatAsallat = -6.874869159391598;
+        var koordinatAsallng = 109.12771860000753;
+    } else if (asal === 'Terminal Tegal') {
+        var koordinatAsallat = -6.872592013388431;
+        var koordinatAsallng = 109.10778548651574;
+    } else {
+        var koordinatAsallat = -6.877636725534338;
+        var koordinatAsallng = 109.14042347302396;
+    }
+
+    if (tujuan === 'Halte SMP 6') {
+        var koordinatTujuanlat = -6.858894307253639;
+        var koordinatTujuanlng = 109.12600904703892;
+    } else if (tujuan === 'Halte Yos Sudarso') {
+        var koordinatTujuanlat = -6.85462980066191;
+        var koordinatTujuanlng = 109.13632385767966;
+    } else if (tujuan === 'Halte UPTD SPF SMPN 7 Kota Tegal') {
+        var koordinatTujuanlat = -6.874869159391598;
+        var koordinatTujuanlng = 109.12771860000753;
+    } else if (tujuan === 'Terminal Tegal') {
+        var koordinatTujuanlat = -6.872592013388431;
+        var koordinatTujuanlng = 109.10778548651574;
+    } else {
+        var koordinatTujuanlat = -6.877636725534338;
+        var koordinatTujuanlng = 109.14042347302396;
+    }
+
+    let map = L.map('map').setView([-6.879481291555164, 109.12554527630527], 14);
+    var titleLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: "OSM"}).addTo(map);
+
+
+    var busIcon = L.icon({
+        iconUrl: '../img/bus.png',
+        iconSize: [50,50]
+    })
+
+    var marker = L.marker([koordinatAsallat, koordinatAsallng], { icon: busIcon }).addTo(map);
+    var secondMarker = L.marker([koordinatTujuanlat, koordinatTujuanlng]).addTo(map);
+
+    L.Routing.control({
+    waypoints: [
+        L.latLng(koordinatAsallat, koordinatAsallng),
+        L.latLng(koordinatTujuanlat, koordinatTujuanlng)
+    ]
+    }).on('routesfound', function(e) {
+        e.routes[0].coordinates.forEach(function(coord, index){
+            setTimeout(() => {
+                marker.setLatLng([coord.lat, coord.lng])
+            }, 100 * index);
+        })
+    })
+    
+    .addTo(map);
+</script>

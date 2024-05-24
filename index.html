@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bus Monitoring</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <img src="img/tegal-logo.png" alt="logo">
+            <span class="logo_name ms-1">Kota Tegal</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Home</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Home</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-collection'></i>
+                        <span class="link_name">Data Bus</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Data Bus</a></li>
+                    <li class="mt-2"><a href="data.html">Tampil Data</a></li>
+                    <li data-bs-toggle="modal" data-bs-target="#tambahDataHome"><a href="#">Tambah Data</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="img/user.jpg" alt="profileImg">
+                    </div>
+                    <div class="name-job">
+                        <div class="job">Admin</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text">Bus Monitoring</span>
+        </div>
+        <div class="contents mt-3">
+            <img src="img/tegal-logo.png" class="mt-5" alt="" style="max-width: 200px; display: block; margin: 0 auto;">
+            <p id="text" class="mt-4" style="width: 500px; text-align: center; margin: auto;">REKAP DATA DAN MONITORING BUS KOTA TEGAL</p>
+        </div>
+
+        <!-- Tambah Data -->
+        <div class="modal fade" id="tambahDataHome" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 mx-auto" id="exampleModalLabel">Tambah Data Bus</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="busFormHome">
+                            <div class="row">
+                                <div class="col form-group mb-3">
+                                    <label for="no_unit_home">Jumlah Penumpang</label>
+                                    <input type="number" class="form-control" id="no_unit_home" name="no_unit_home" autocomplete="off" required>
+                                </div>
+                                <div class="col form-group mb-3">
+                                    <label for="plat_home">No Plat Polisi</label>
+                                    <input type="text" class="form-control" id="plat_home" name="plat_home" autocomplete="off" required>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="jenis_kelamin_home">Jam Operasi</label>
+                                <input type="time" class="form-control" id="jenis_kelamin_home" name="jenis_kelamin_home">
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="asal_home" class="form-label">Asal</label>
+                                    <select id="asal_home" class="form-select" name="asal_home">
+                                        <option selected>Pilih...</option>
+                                        <option value="Halte SMP 6">Halte SMP 6</option>
+                                        <option value="Halte Yos Sudarso">Halte Yos Sudarso</option>
+                                        <option value="Halte UPTD SPF SMPN 7 Kota Tegal">Halte UPTD SPF SMPN 7 Kota Tegal</option>
+                                        <option value="Terminal Tegal">Terminal Tegal</option>
+                                        <option value="Halte Kedjambon JSM">Halte Kedjambon JSM</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="tujuan_home" class="form-label">Tujuan</label>
+                                    <select id="tujuan_home" class="form-select" name="tujuan_home">
+                                        <option selected>Pilih...</option>
+                                        <option value="Halte SMP 6">Halte SMP 6</option>
+                                        <option value="Halte Yos Sudarso">Halte Yos Sudarso</option>
+                                        <option value="Halte UPTD SPF SMPN 7 Kota Tegal">Halte UPTD SPF SMPN 7 Kota Tegal</option>
+                                        <option value="Terminal Tegal">Terminal Tegal</option>
+                                        <option value="Halte Kedjambon JSM">Halte Kedjambon JSM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="reset" class="btn btn-danger">Reset</button>
+                                <button type="submit" class="btn btn-primary" name="submit">Simpan</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+    <script src="js/insertDataHome.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

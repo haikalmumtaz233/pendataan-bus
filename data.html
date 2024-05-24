@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bus Monitoring</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <img src="img/tegal-logo.png" alt="logo">
+            <span class="logo_name ms-1">Kota Tegal</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Home</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="index.html">Home</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-collection'></i>
+                        <span class="link_name">Data Bus</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Data Bus</a></li>
+                    <li class="mt-2"><a href="#">Tampil Data</a></li>
+                    <li data-bs-toggle="modal" data-bs-target="#tambahData"><a href="#">Tambah Data</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="img/user.jpg" alt="profileImg">
+                    </div>
+                    <div class="name-job">
+                        <div class="job">Admin</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text">Bus Monitoring</span>
+        </div>
+        <div class="contents mt-5">
+            <h3 class="text-center mb-4">Data Bus</h3>
+            <table id="busTable" class="table table-striped table-md">
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">No Plat Polisi</th>
+                        <th scope="col">Jumlah Penumpang</th>
+                        <th scope="col">Jam Operasi</th>
+                        <th scope="col">Trayek</th>
+                        <th scope="col" colspan="2">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    
+                </tbody>
+            </table>
+
+            <!-- Tombol Tambah Data -->
+            <center>
+                <button type="button" class="btn btn-primary mt-1 mb-3" data-bs-toggle="modal" data-bs-target="#tambahData">
+                    Tambah Data
+                </button>
+            </center>
+
+            <!-- Modal Tambah Data -->
+            <div class="modal fade" id="tambahData" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 mx-auto" id="exampleModalLabel">Tambah Data Bus</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="busForm">
+                                <div class="row">
+                                    <div class="col form-group mb-3">
+                                        <label for="jumlah_penumpang">Jumlah Penumpang</label>
+                                        <input type="number" class="form-control" id="jumlah_penumpang" name="jumlah_penumpang" autocomplete="off" required>
+                                    </div>
+                                    <div class="col form-group mb-3">
+                                        <label for="plat">No Plat Polisi</label>
+                                        <input type="text" class="form-control" id="plat" name="plat" autocomplete="off" required>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="jam_operasi">Jam Operasi</label>
+                                    <input type="time" class="form-control" id="jam_operasi" name="jam_operasi">
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label for="asal" class="form-label">Asal</label>
+                                        <select id="asal" class="form-select" name="asal">
+                                            <option selected>Pilih...</option>
+                                            <option value="Halte SMP 6">Halte SMP 6</option>
+                                            <option value="Halte Yos Sudarso">Halte Yos Sudarso</option>
+                                            <option value="Halte UPTD SPF SMPN 7 Kota Tegal">Halte UPTD SPF SMPN 7 Kota Tegal</option>
+                                            <option value="Terminal Tegal">Terminal Tegal</option>
+                                            <option value="Halte Kedjambon JSM">Halte Kedjambon JSM</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="tujuan" class="form-label">Tujuan</label>
+                                        <select id="tujuan" class="form-select" name="tujuan">
+                                            <option selected>Pilih...</option>
+                                            <option value="Halte SMP 6">Halte SMP 6</option>
+                                            <option value="Halte Yos Sudarso">Halte Yos Sudarso</option>
+                                            <option value="Halte UPTD SPF SMPN 7 Kota Tegal">Halte UPTD SPF SMPN 7 Kota Tegal</option>
+                                            <option value="Terminal Tegal">Terminal Tegal</option>
+                                            <option value="Halte Kedjambon JSM">Halte Kedjambon JSM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                    <button type="submit" class="btn btn-primary">Simpan</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+    <script src="js/insertData.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
