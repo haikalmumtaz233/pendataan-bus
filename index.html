@@ -59,9 +59,166 @@
             <i class='bx bx-menu'></i>
             <span class="text">Bus Monitoring</span>
         </div>
-        <div class="contents mt-3">
-            <img src="img/tegal-logo.png" class="mt-5" alt="" style="max-width: 200px; display: block; margin: 0 auto;">
-            <p id="text" class="mt-4" style="width: 500px; text-align: center; margin: auto;">REKAP DATA DAN MONITORING BUS KOTA TEGAL</p>
+        <div class="contents">
+            <!-- <img src="img/terminal-tegal.jpg" alt="background" id="jumbotron"> -->
+            <img src="img/tegal-logo.png" class="mt-2" alt="" style="max-width: 200px; display: block; margin: 0 auto;">
+            <p id="text" class="mt-4" style="width: 500px; text-align: center; margin: auto;">
+                <strong>Selamat Datang Di Sistem Informasi Monitoring Bus Terminal Kota Tegal</strong>
+            </p>
+        </div>
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="bus-tab" data-bs-toggle="tab" href="#bus" role="tab" aria-controls="bus" aria-selected="false">Bus</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h4 class="card-title">Informasi Tentang Sistem</h4>
+                            <p class="card-text">
+                                Sistem ini memonitor berbagai aspek operasional bus di Kota Tegal, termasuk jumlah penumpang, jadwal operasi, dan rute yang ditempuh. Dengan pemantauan jumlah penumpang, 
+                                sistem dapat membantu dalam pengaturan kapasitas bus dan mengurangi kepadatan penumpang pada jam-jam sibuk. Pemantauan jadwal operasi memungkinkan manajemen 
+                                untuk memastikan bus beroperasi sesuai dengan jadwal yang telah ditentukan, sehingga penumpang dapat mengandalkan ketepatan waktu layanan.
+                            </p>
+                            <h5 class="mt-2 card-text">
+                                Informasi Tambahan
+                            </h5>
+                            <div>
+                                <a class="btn btn-success text-white" href="https://g.co/kgs/BX5phG2" target="_blank">
+                                    <i class='bx bx-map'></i> Lokasi Terminal
+                                </a>
+                                <a class="btn btn-primary text-white" href="https://wartabahari.com/23735/terminal-tipe-a-kota-tegal-resmi-dikelola-pusat/" target="_blank">
+                                    <i class='bx bx-globe'></i> Website Resmi
+                                </a>
+
+                            </div>
+                            
+                        </div>
+                        <div class="tab-pane fade" id="bus" role="tabpanel" aria-labelledby="bus-tab">
+                            <h4 class="card-title">PO Bus Andalan</h4>
+                            <div class="d-flex align-items-start">
+                                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                    <button class="nav-link active" id="v-pills-desri-tab" data-bs-toggle="pill" data-bs-target="#v-pills-desri" type="button" role="tab" aria-controls="v-pills-desri" aria-selected="true">Dewi Sri</button>
+                                    <button class="nav-link" id="v-pills-dejay-tab" data-bs-toggle="pill" data-bs-target="#v-pills-dejay" type="button" role="tab" aria-controls="v-pills-dejay" aria-selected="false">DedyJaya</button>
+                                    <button class="nav-link" id="v-pills-haryanto-tab" data-bs-toggle="pill" data-bs-target="#v-pills-haryanto" type="button" role="tab" aria-controls="v-pills-haryanto" aria-selected="false">Haryanto</button>
+                                    <button class="nav-link" id="v-pills-coyo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-coyo" type="button" role="tab" aria-controls="v-pills-coyo" aria-selected="false">Coyo</button>
+                                </div>
+                                <div class="tab-content" id="v-pills-tabContent">
+                                    <div class="tab-pane fade show active" id="v-pills-desri" role="tabpanel" aria-labelledby="v-pills-desri-tab" tabindex="0">
+                                        <div class="card mb-3">
+                                            <div class="row g-0">
+                                                <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                                    <img src="img/desri.jpg" class="img-fluid rounded-start" alt="Dewi Sri">
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="card-body">
+                                                        <p class="card-text">
+                                                            PO Dewi Sri, didirikan oleh H Ismail dan Hj Rokhayah pada 1980-an,
+                                                            awalnya melayani rute Tegal-Purwokerto. Pada sekitar 1993, mereka 
+                                                            melebarkan jangkauan dengan trayek AKAP dari Tegal ke Jakarta. 
+                                                            Armada mereka kini telah tumbuh menjadi lebih dari 500 bus, melayani 
+                                                            berbagai rute termasuk AKAP, AKDP, dan angkutan kota. PO Dewi Sri 
+                                                            tetap menjadi pilihan utama warga Tegal untuk perjalanan ke Jakarta dan kota-kota di Jawa.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="btn btn-dark text-white" href="https://ayonaikbis.com/nomor-telepon-agen-bus-dewi-sri-lengkap/19929" target="_blank">
+                                            <i class='bx bx-phone'></i> Agen Bus
+                                        </a>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-dejay" role="tabpanel" aria-labelledby="v-pills-dejay-tab" tabindex="0">
+                                        <div class="card mb-3">
+                                            <div class="row g-0">
+                                                <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                                    <img src="img/dejay.jpg" class="img-fluid rounded-start" alt="Dewi Sri">
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="card-body">
+                                                        <p class="card-text">
+                                                            PO Dedy Jaya, didirikan oleh H Muhadi Setiabudi pada 11 Januari 
+                                                            1989 di Brebes, Jawa Tengah. Awalnya, mereka melayani rute 
+                                                            Brebes-Jakarta PP dengan 8 armada bus. Kini, perusahaan ini 
+                                                            telah berkembang menjadi melayani beberapa kota besar di Pulau 
+                                                            Jawa dan menjadi pilihan utama bagi warga Tegal dalam bepergian.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="btn btn-dark text-white" href="https://id3454844-agen-bus-dedy-jaya.contact.page/" target="_blank">
+                                            <i class='bx bx-phone'></i> Agen Bus
+                                        </a>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-haryanto" role="tabpanel" aria-labelledby="v-pills-haryanto-tab" tabindex="0">
+                                        <div class="card mb-3">
+                                            <div class="row g-0">
+                                                <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                                    <img src="img/haryanto.jpg" class="img-fluid rounded-start" alt="Dewi Sri">
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="card-body">
+                                                        <p class="card-text">
+                                                            Perusahaan otobus asal Kudus, Jawa Tengah ini juga menjadi andalan masyarakat Tegal untuk menuju 
+                                                            ke kota tujuan. PO Haryanto juga diketahui membeli bus dari PO Tegal Indah demi membukta trayek ke 
+                                                            Kota Bahari. PO Haryanto memang dikenal gemar mengekspansi lini operasionalnya jika dilihat rute 
+                                                            tersebut menjanjikan. Ini yang membuat mereka terbilang sukses, meski usianya masih cukup muda.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="btn btn-dark text-white" href="https://ayonaikbis.com/harga-tiket-alamat-agen-bus-haryanto/1528" target="_blank">
+                                            <i class='bx bx-phone'></i> Agen Bus
+                                        </a>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-coyo" role="tabpanel" aria-labelledby="v-pills-coyo-tab" tabindex="0">
+                                        <div class="card mb-3">
+                                            <div class="row g-0">
+                                                <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                                    <img src="img/coyo.jpeg" class="img-fluid rounded-start" alt="Dewi Sri">
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="card-body">
+                                                        <p class="card-text">
+                                                            PO Coyo, salah satu pelopor angkutan umum di Jawa Tengah, didirikan pada 1954 oleh 
+                                                            seorang pengusaha beras yang melihat peluang di industri transportasi. Awalnya 
+                                                            menggunakan truk bekas perang yang dirombak menjadi bus bodi kayu. Generasi kedua 
+                                                            mengembangkan bisnis ini hingga ke Semarang pada 1980-an. PO Coyo tetap eksis melayani 
+                                                            trayek AKAP dan AKDP hingga saat ini.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="btn btn-dark text-white" href="https://www.semuabis.com/agen-bus-coyo_3Q-0896-6264-9008" target="_blank">
+                                            <i class='bx bx-phone'></i> Agen Bus
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <h5 class="card-title">Kontak</h5>
+                            <p class="card-text">Jika ada komentar atau hal yang ingin ditanyakan bisa langsung ke Whatsapp dibawah.</p>
+                            <a class="btn btn-success text-white" href="https://wa.me/082136390544" target="_blank">
+                                <i class='bx bx-phone'></i> Whatsapp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Tambah Data -->
