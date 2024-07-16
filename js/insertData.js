@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     busForm.addEventListener('submit', function (event) {
-        event.preventDefault();
         const jumlah_penumpang = document.getElementById('jumlah_penumpang').value;
         const plat = document.getElementById('plat').value;
         const jam_operasi = document.getElementById('jam_operasi').value;
